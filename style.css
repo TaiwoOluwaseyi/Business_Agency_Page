@@ -290,7 +290,7 @@ left: 100%;
 /* Section 2 */
 .section-2 {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   background-color: #222020;
   display: flex;
   align-items: center;
@@ -318,7 +318,7 @@ left: 100%;
   position: absolute;
   top: 5rem;
   right: 15rem;
-  box-shadow: 3rem 3rem 6rem rgba(0, 0, 0, 0.7);
+  box-shadow: 3rem 3rem 3rem rgba(0, 0, 0, 0.7);
   overflow: hidden;
 }
 
@@ -327,6 +327,7 @@ left: 100%;
   height: 100%;
   object-fit: cover;
   opacity: 0.3;
+  transition: opacity 0.3s;
 }
 
 .controls {
@@ -334,6 +335,12 @@ left: 100%;
   position: absolute;
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.7);
+  transform: translateY(calc(100% - 0.4rem));
+  transition: transform 0.9s;
+}
+
+.video-wrapper:hover .controls {
+  transform: translateY(0);
 }
 
 .video-bar-wrapper {
@@ -349,6 +356,7 @@ left: 100%;
   height: 100%;
   width: 20%;
   background-color: #d30819;
+  transition: width 0.2s linear;
 }
 
 .buttons {
@@ -363,13 +371,15 @@ cursor: pointer;
 
 .buttons i {
   font-size: 2.8rem;
+  width: 3rem;
+  height: 3rem;
   color: #fff;
 }
 
 .section-2-paragraph {
   width: 100rem;
   position: absolute;
-  bottom: 8rem; 
+  bottom: -20rem; 
   right: 15rem;
   font-size: 2rem;
   color: #ddd;
@@ -389,11 +399,13 @@ cursor: pointer;
   align-self: flex-start;
   font-size: 5rem;
   margin-bottom: 2rem;
+  color: #bbb;
 }
 
 .fa-quote-right {
   align-self: flex-end;
   font-size: 5rem;
+  color: #bbb;;
 }
 
 
